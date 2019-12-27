@@ -1,6 +1,7 @@
 ## Messenger consumer
 Приложение слушает очередь и в случае появления сообщения отправляет его в H2 in memory базу данных.
 Просмотр содержимого базы данных доступен по адресу http://localhost:8080/h2-console/
+Реализация очереди: ActiveMQ 5
 
 ## Commands to build project
 ```
