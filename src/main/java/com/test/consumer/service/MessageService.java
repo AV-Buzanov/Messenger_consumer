@@ -6,7 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
-
+/**
+ * Класс делегирует CRUD операции репозитория MessageRepository с предварительной валидацией данных.
+ * @author Aleksey Buzanov
+ */
 @Service
 public class MessageService implements IMessageService{
     private final MessageRepository messageRepository;

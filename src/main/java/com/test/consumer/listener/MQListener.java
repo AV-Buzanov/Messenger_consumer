@@ -7,7 +7,10 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import javax.jms.TextMessage;
-
+/**
+ * Класс принимает сообщения из очереди и передает их в IMessageService.
+ * @author Aleksey Buzanov
+ */
 @Component
 public class MQListener {
     private final IMessageService messageService;
