@@ -3,6 +3,7 @@ package com.test.consumer;
 import com.test.consumer.entity.MyMessage;
 import com.test.consumer.listener.MQListener;
 import com.test.consumer.repository.MessageRepository;
+import com.test.consumer.service.IMessageService;
 import com.test.consumer.service.MessageService;
 import org.apache.activemq.command.ActiveMQTextMessage;
 import org.junit.Test;
@@ -30,7 +31,7 @@ public class MQListenerTest {
     @Autowired
     private MQListener mqListener;
     @MockBean
-    private MessageService messageService;
+    private IMessageService messageService;
 
     @Test
     public void sendMessage() throws Exception {

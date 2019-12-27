@@ -1,6 +1,7 @@
 package com.test.consumer;
 
 import com.test.consumer.entity.MyMessage;
+import com.test.consumer.service.IMessageService;
 import com.test.consumer.service.MessageService;
 import org.apache.activemq.command.ActiveMQTextMessage;
 import org.junit.Assert;
@@ -18,7 +19,7 @@ import javax.jms.TextMessage;
 public class MessageServiceTest {
 
     @Autowired
-    private MessageService messageService;
+    private IMessageService messageService;
 
     @Test(expected = Exception.class)
     public void sendMessageNullTest() throws Exception {

@@ -1,6 +1,7 @@
 package com.test.consumer.listener;
 
 import com.test.consumer.entity.MyMessage;
+import com.test.consumer.service.IMessageService;
 import com.test.consumer.service.MessageService;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
@@ -9,9 +10,9 @@ import javax.jms.TextMessage;
 
 @Component
 public class MQListener {
-    private final MessageService messageService;
+    private final IMessageService messageService;
 
-    public MQListener(MessageService messageService) {
+    public MQListener(IMessageService messageService) {
         this.messageService = messageService;
     }
 
